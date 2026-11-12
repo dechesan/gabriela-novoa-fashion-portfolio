@@ -88,21 +88,6 @@
 
       <div class="contact-links">
 
-        <!-- EMAIL -->
-
-        <a href="mailto:gabycachalote@hotmail.com">
-
-          <span>EMAIL</span>
-
-          <strong>
-            gabycachalote@hotmail.com
-          </strong>
-
-          <b>↗</b>
-
-        </a>
-
-
         <!-- LINKEDIN -->
 
         <a
@@ -128,23 +113,48 @@
            CONTACT FORM
            ======================================== -->
 
-      <form class="contact-form" id="email-form">
-
-        <h2>
-          Send a message
-        </h2>
-
+            
+      <!-- CONTACT FORM — WEB3FORMS -->
+      
+      <form
+        class="contact-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+      
+        <h2>Send a message</h2>
+      
         <p>
-          This opens your email application with your
-          message prepared.
+          Have a question or collaboration in mind?
+          Send me a message and I'll get back to you.
         </p>
-
-
-        <!-- NAME FIELD -->
-
+      
+        <!-- Web3Forms Access Key -->
+        <input
+          type="hidden"
+          name="access_key"
+          value="553eb6ad-e0e0-4ea2-b4dd-714b97347932"
+        >
+      
+        <!-- Email Subject -->
+        <input
+          type="hidden"
+          name="subject"
+          value="New Portfolio Inquiry — Gabriela Novoa"
+        >
+      
+        <!-- Spam Protection -->
+        <input
+          type="checkbox"
+          name="botcheck"
+          style="display: none;"
+          tabindex="-1"
+          autocomplete="off"
+        >
+      
+        <!-- NAME -->
         <label>
           Your name
-
           <input
             type="text"
             name="name"
@@ -152,13 +162,10 @@
             placeholder="Your name"
           >
         </label>
-
-
-        <!-- EMAIL FIELD -->
-
+      
+        <!-- EMAIL -->
         <label>
           Your email
-
           <input
             type="email"
             name="email"
@@ -166,13 +173,10 @@
             placeholder="you@example.com"
           >
         </label>
-
-
-        <!-- MESSAGE FIELD -->
-
+      
+        <!-- MESSAGE -->
         <label>
           Message
-
           <textarea
             name="message"
             required
@@ -180,14 +184,12 @@
             placeholder="Tell me about your project..."
           ></textarea>
         </label>
-
-
-        <!-- SUBMIT BUTTON -->
-
+      
+        <!-- SUBMIT -->
         <button type="submit">
-          Prepare email ↗
+          Send Message ↗
         </button>
-
+      
       </form>
 
     </section>
