@@ -1230,3 +1230,93 @@ em {
   }
 
 }
+
+
+/* =========================================
+   HERO IMAGE — SHOW ENTIRE COMPOSITION
+   ========================================= */
+
+.hero {
+  display: block;
+  height: auto;
+  min-height: 0;
+  background: #211e21;
+}
+
+.hero-photo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: none;
+}
+
+.hero-photo > .hero-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: initial;
+}
+
+/* The image is already darkened */
+.hero-shade {
+  display: none;
+}
+
+/* Preserve text on the left side */
+.hero-copy {
+  position: absolute;
+  z-index: 2;
+  top: 18%;
+  left: 6%;
+  width: 55%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero-copy {
+    top: 14%;
+    left: 5%;
+    width: 58%;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(48px, 7vw, 90px);
+    margin: 20px 0;
+  }
+
+  .hero-descriptor {
+    font-size: clamp(15px, 2vw, 24px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+  }
+
+  .hero-photo {
+    height: auto;
+  }
+
+  .hero-copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    padding: 45px 7%;
+    background: #292426;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(56px, 12vw, 76px);
+  }
+
+  .hero-descriptor {
+    font-size: 20px;
+  }
+}
+
