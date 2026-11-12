@@ -1,1 +1,54 @@
-document.addEventListener('DOMContentLoaded',()=>{const t=document.querySelector('.mobile-toggle'),n=document.querySelector('.site-nav');if(t&&n){t.addEventListener('click',()=>{let open=n.classList.toggle('open');t.setAttribute('aria-expanded',open?'true':'false')});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')))}const f=document.getElementById('email-form');if(f){f.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(f),name=d.get('name'),email=d.get('email'),msg=d.get('message');const subj=encodeURIComponent('Portfolio enquiry from '+name),body=encodeURIComponent('From: '+name+' ('+email+')\n\n'+msg);window.location.href='mailto:gabycachalote@hotmail.com?subject='+subj+'&body='+body})}});
+
+/* =========================================
+   GABRIELA NOVOA — PORTFOLIO
+   Website JavaScript
+   ========================================= */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* =========================================
+     MOBILE NAVIGATION
+     ========================================= */
+
+  const toggle = document.querySelector('.mobile-toggle');
+  const nav = document.querySelector('.site-nav');
+
+  if (toggle && nav) {
+
+    // Open and close the mobile menu
+    toggle.addEventListener('click', () => {
+
+      const isOpen = nav.classList.toggle('open');
+
+      toggle.setAttribute(
+        'aria-expanded',
+        isOpen ? 'true' : 'false'
+      );
+
+    });
+
+    // Close menu when a navigation link is clicked
+    nav.querySelectorAll('a').forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        nav.classList.remove('open');
+
+        toggle.setAttribute('aria-expanded', 'false');
+
+      });
+
+    });
+
+  }
+
+  /* =========================================
+     CONTACT FORM
+     ========================================= */
+
+  // Contact submissions are handled by Web3Forms.
+  // No JavaScript is needed for the form.
+  // The form submits directly to:
+  // https://api.web3forms.com/submit
+
+});
