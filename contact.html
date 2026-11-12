@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#211d20">
+
   <meta
     name="description"
     content="Fashion research, concept development and visual storytelling by Gabriela Novoa."
@@ -19,9 +20,7 @@
 
 <body>
 
-  <!-- ========================================
-       HEADER & NAVIGATION
-       ======================================== -->
+  <!-- HEADER & NAVIGATION -->
 
   <header class="site-header">
 
@@ -56,19 +55,13 @@
   </header>
 
 
-  <!-- ========================================
-       MAIN CONTENT
-       ======================================== -->
+  <!-- MAIN CONTENT -->
 
   <main id="main">
 
-    <!-- CONTACT SECTION -->
-
     <section class="contact-wrap">
 
-      <span class="eyebrow">
-        SAY HELLO
-      </span>
+      <span class="eyebrow">SAY HELLO</span>
 
       <h1>
         Let's start a<br>
@@ -82,68 +75,63 @@
       </p>
 
 
-      <!-- ========================================
-           CONTACT LINKS
-           ======================================== -->
+      <!-- CONTACT LINKS -->
 
       <div class="contact-links">
-
-        <!-- LINKEDIN -->
 
         <a
           href="https://www.linkedin.com/in/gabriela-novoa28"
           target="_blank"
           rel="noopener noreferrer"
         >
-
           <span>LINKEDIN</span>
-
-          <strong>
-            gabriela-novoa28
-          </strong>
-
+          <strong>gabriela-novoa28</strong>
           <b>↗</b>
-
         </a>
 
       </div>
 
 
-      <!-- ========================================
-           CONTACT FORM
-           ======================================== -->
+      <!-- WEB3FORMS CONTACT FORM -->
 
-            
-      <!-- CONTACT FORM — WEB3FORMS -->
-      
       <form
         class="contact-form"
+        id="contact-form"
         action="https://api.web3forms.com/submit"
         method="POST"
       >
-      
+
         <h2>Send a message</h2>
-      
+
         <p>
           Have a question or collaboration in mind?
           Send me a message and I'll get back to you.
         </p>
-      
-        <!-- Web3Forms Access Key -->
+
+
+        <!-- WEB3FORMS CONFIGURATION -->
+
         <input
           type="hidden"
           name="access_key"
           value="553eb6ad-e0e0-4ea2-b4dd-714b97347932"
         >
-      
-        <!-- Email Subject -->
+
         <input
           type="hidden"
           name="subject"
           value="New Portfolio Inquiry — Gabriela Novoa"
         >
-      
-        <!-- Spam Protection -->
+
+        <input
+          type="hidden"
+          name="from_name"
+          value="Gabriela Novoa Portfolio"
+        >
+
+
+        <!-- SPAM PROTECTION -->
+
         <input
           type="checkbox"
           name="botcheck"
@@ -151,45 +139,75 @@
           tabindex="-1"
           autocomplete="off"
         >
-      
-        <!-- NAME -->
-        <label>
+
+
+        <!-- NAME FIELD -->
+
+        <label for="contact-name">
           Your name
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Your name"
-          >
         </label>
-      
-        <!-- EMAIL -->
-        <label>
+
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          required
+          autocomplete="name"
+          placeholder="Your name"
+        >
+
+
+        <!-- EMAIL FIELD -->
+
+        <label for="contact-email">
           Your email
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="you@example.com"
-          >
         </label>
-      
-        <!-- MESSAGE -->
-        <label>
+
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder="you@example.com"
+        >
+
+
+        <!-- MESSAGE FIELD -->
+
+        <label for="contact-message">
           Message
-          <textarea
-            name="message"
-            required
-            rows="5"
-            placeholder="Tell me about your project..."
-          ></textarea>
         </label>
-      
-        <!-- SUBMIT -->
-        <button type="submit">
+
+        <textarea
+          id="contact-message"
+          name="message"
+          required
+          rows="5"
+          placeholder="Tell me about your project..."
+        ></textarea>
+
+
+        <!-- SUBMIT BUTTON -->
+
+        <button
+          type="submit"
+          id="contact-submit"
+        >
           Send Message ↗
         </button>
-      
+
+
+        <!-- SUCCESS / ERROR MESSAGE -->
+
+        <p
+          id="form-status"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          hidden
+        ></p>
+
       </form>
 
     </section>
@@ -197,21 +215,15 @@
   </main>
 
 
-  <!-- ========================================
-       FOOTER
-       ======================================== -->
+  <!-- FOOTER -->
 
   <footer class="footer">
 
     <div>
 
-      <span class="eyebrow">
-        LET’S CONNECT
-      </span>
+      <span class="eyebrow">LET’S CONNECT</span>
 
-      <h2>
-        Have a project in mind?
-      </h2>
+      <h2>Have a project in mind?</h2>
 
       <a class="serif-link" href="contact.html">
         Get in touch
